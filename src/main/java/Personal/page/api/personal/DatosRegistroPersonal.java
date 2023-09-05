@@ -1,6 +1,16 @@
 package Personal.page.api.personal;
 
-	public record DatosRegistroPersonal(String Nombres, String Apellidos, String Direccion, String Telefono, String Puesto, String Fecha_Contratacion, String Salario) {
+import jakarta.validation.constraints.NotBlank;
+
+public record DatosRegistroPersonal(
+		@NotBlank String Nombres, 
+		@NotBlank String Apellidos, 
+		@NotBlank String Direccion, 
+		@NotBlank String Telefono, 
+		@NotBlank String Puesto, 
+		@NotBlank String Fecha_Contratacion, 
+		@NotBlank String Salario) 
+{
 
 		
 		

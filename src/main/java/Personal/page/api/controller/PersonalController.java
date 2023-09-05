@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import Personal.page.api.personal.DatosRegistroPersonal;
 import Personal.page.api.personal.Personal;
 import Personal.page.api.personal.PersonalRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/personal")
@@ -18,7 +19,7 @@ public class PersonalController {
 	private PersonalRepository personalrepository;
 	
 	@PostMapping
-	public void RegistrarPersonal(@RequestBody DatosRegistroPersonal datosregistropersonal) {
+	public void RegistrarPersonal(@RequestBody @Valid DatosRegistroPersonal datosregistropersonal) {
 		
 		System.out.println("El request llego correctamente");
 		System.out.println(datosregistropersonal);
